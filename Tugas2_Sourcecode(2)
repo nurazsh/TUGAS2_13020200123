@@ -1,0 +1,699 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+
+/*NIM           : 13020200123
+ *NAMA          : NURAZISAH AHMAD
+ *HARI/TANGGAL  : Selasa/22-Maret-2022
+ */ 
+import java.util.Scanner;
+/* contoh baca nilai x, */
+/* Jumlahkan nilai yang dibaca dengan ITERATE */
+public class PrintXRepeat {
+/**
+* @param args
+*/
+public static void main(String[] args) {
+// TODO Auto-generated method stub
+/* Kamus : */
+int Sum;
+int x;
+Scanner masukan=new Scanner(System.in);
+/* Program */
+System.out.print ("Masukkan nilai x (int), akhiri dg999 : ");
+x = masukan.nextInt(); /* First Elmt */
+if (x == 999){
+System.out.print("Kasus kosong \n");
+}else { /* MInimal ada satu data yang dijumlahkan
+*/
+Sum = 0; /* Inisialisasi; invariant !! */
+do{
+Sum = Sum + x; /* Proses */
+System.out.print ("Masukkan nilai x (int), akhiri dg999 : ");
+x = masukan.nextInt(); /* Next Elmt */
+} while (x != 999); /* Kondisi pengulangan */
+System.out.println ("Hasil penjumlahan = "+Sum);
+/* Terminasi */
+}
+}
+}
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+
+/*NIM           : 13020200123
+ *NAMA          : NURAZISAH AHMAD
+ *HARI/TANGGAL  : Selasa/22-Maret-2022
+ */
+import java.util.Scanner;
+/* contoh baca nilai x, */
+/* Jumlahkan nilai yang dibaca dengan WHILE */
+public class PrintXWhile {
+    public static void main(String[] args) {
+    // TODO Auto-generated method stub
+    /* Kamus : */
+
+    int Sum;
+    int x;
+    Scanner masukan=new Scanner(System.in);
+    /* Program */
+
+        Sum = 0; /* Inisialisasi */
+        System.out.print ("Masukkan nilai x (int), akhiri dg999 : ");
+        x = masukan.nextInt();/* First Elmt*/
+        while (x != 999) /* Kondisi berhenti */ {
+        Sum = Sum + x; /* Proses */
+
+            System.out.print("Masukkan nilai x (int), akhiridg 999 : ");
+            x = masukan.nextInt();/* First Elmt*/
+            }
+                System.out.println("Hasil penjumlahan = "+ Sum); /*Terminasi */
+ }
+}
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+
+/*NIM           : 13020200123
+ *NAMA          : NURAZISAH AHMAD
+ *HARI/TANGGAL  : Selasa/22-Maret-2022
+ */
+import java.util.Scanner;
+/* Contoh program yang mengandung prosedur dan fungsi */
+/* prosedur/fungsi */
+public class SubProgram {
+/**
+     * @param a
+     * @param b
+     * @return 
+*/
+public static int maxab (int a, int b){
+/* mencari maksimum dua bilangan bulat */
+return ((a >= b) ? a : b);
+}
+public static void tukar (int a, int b)
+{ /* menukar dua bilangan bulat */
+int temp;
+temp = a;
+a = b;
+b = temp;
+System.out.println ("Ke dua bilangan setelah tukar: a ="+ a +" b = "+ b);
+}
+/*** Program Utama
+     * @param args ***/
+public static void main(String[] args) {
+// TODO Auto-generated method stub
+/* Membaca dua bilangan integer */
+/* Menuliskan maksimum dua bilangan yang dibaca
+dg memanggil fungsi */
+/* Menukar kedua bilangan dengan 'prosedur' */
+int a, b;
+Scanner masukan=new Scanner(System.in);
+System.out.print ("Maksimum dua bilangan\n");
+System.out.print ("Ketikkan dua bilangan,pisahkan dg RETURN : \n");
+a = masukan.nextInt();
+b = masukan.nextInt();
+System.out.println ("Ke dua bilangan : a ="+ a +" b = "+ b);
+System.out.println ("Maksimum = " + (maxab
+(a, b)));
+System.out.print("Tukar kedua bilangan...\n");
+tukar (a, b);
+}
+}
+
+
+import java.util.Scanner;
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+
+/*NIM           : 13020200123
+ *NAMA          : NURAZISAH AHMAD
+ *HARI/TANGGAL  : Selasa/22-Maret-2022
+ */
+import java.util.Scanner;
+
+/*contoh pemakaian IF tiga kasus : wujud air */
+public class Tempair {
+    
+    /**
+     * @param args
+     */
+    @SuppressWarnings("empty-statement")
+    public static void main(String[] args){
+        //TODO Auto-generated method stub
+        /*kamus : */
+        int T;
+        Scanner masukan=new Scanner(System.in);
+        /*Program*/
+        System.out.print ("Contoh IF tiga kasus \n");
+        System.out.print ("Temperatur (der. C) = ");
+        T=masukan.nextInt();
+        if (T < 0) {
+            System.out.print ("wujud air beku \n"+ T);
+        }else if ((0 <= T) && (T <=100)){
+            System.out.print ("Wujud air cair \n"+ T);
+        }else if (T >100){
+            System.out.print ("Wujud air uap/gas \n"+T);
+        };
+    }
+}
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+
+/*NIM           : 13020200123
+ *NAMA          : NURAZISAH AHMAD
+ *HARI/TANGGAL  : Selasa/22-Maret-2022
+ */
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+
+import javax.swing.*;
+public class BacaString {        
+/**
+* @param args
+* @throws IOException
+*/
+public static void main(String[] args) throws IOException {
+// TODO Auto-generated method stub
+/* Kamus */
+String str;
+BufferedReader datAIn = new BufferedReader(new
+InputStreamReader(System.in));
+/* Program */
+System.out.print ("\nBaca string dan Integer: \n");
+System.out.print("masukkan sebuah string: ");
+str= datAIn.readLine();
+System.out.print ("String yang dibaca : "+ str);
+}
+}
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+
+/*NIM           : 13020200123
+ *NAMA          : NURAZISAH AHMAD
+ *HARI/TANGGAL  : Selasa/22-Maret-2022
+ */
+
+public class ForEver {
+    
+/**
+* @param args
+*/
+    
+public static void main(String[] args) {
+// TODO Auto-generated method stub
+/* Program */
+System.out.println("Program akan looping, akhiri dengan ^c");
+while (true)
+    { System.out.print ("Print satu baris ....\n");
+    }
+}
+}
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+
+/*NIM           : 13020200123
+ *NAMA          : NURAZISAH AHMAD
+ *HARI/TANGGAL  : Selasa/22-Maret-2022
+ */
+
+/* contoh pemakaian IF satu kasus */
+/* membaca nilai integer, menuliskan nilainya jika positif */
+import java.util.Scanner;
+public class If1 {
+    
+/**
+* @param args
+*/
+    
+public static void main(String[] args) {
+// TODO Auto-generated method stub
+/* Kamus */
+Scanner masukan=new Scanner(System.in);
+int a;
+/* Program */
+System.out.print ("Contoh IF satu kasus \n");
+System.out.print ("Ketikkan suatu nilai integer : ");
+a = masukan.nextInt();
+if (a >= 0)
+System.out.print ("\nNilai a positif "+ a);
+}
+}
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+
+/*NIM           : 13020200123
+ *NAMA          : NURAZISAH AHMAD
+ *HARI/TANGGAL  : Selasa/22-Maret-2022
+ */
+
+import java.util.Scanner;
+/* contoh pemakaian IF dua kasus komplementer */
+/* Membaca sebuah nilai, */
+/* menuliskan 'Nilai a positif , nilai a', jika a >=0 */
+/* 'Nilai a negatif , nilai a', jika a <0 */
+public class If2 {
+/**
+* @param args
+*/
+public static void main(String[] args) {
+// TODO Auto-generated method stub
+/* Kamus */
+int a;
+
+Scanner masukan=new Scanner(System.in);
+/* Program */
+
+System.out.print ("Contoh IF dua kasus \n");
+System.out.print ("Ketikkan suatu nilai integer :");
+a=masukan.nextInt();
+if (a >= 0){
+    
+System.out.println ("Nilai a positif "+ a);
+}
+else /* a< 0 */
+{
+System.out.println ("Nilai a negatif "+ a);
+}
+}
+}
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+
+/*NIM           : 13020200123
+ *NAMA          : NURAZISAH AHMAD
+ *HARI/TANGGAL  : Selasa/22-Maret-2022
+ */
+
+import java.util.Scanner;
+/* contoh pemakaian IF tiga kasus */ /* Membaca sebuah nilai, */
+/* menuliskan 'Nilai a positif , nilai a', jika a >0 */
+/* 'Nilai Nol , nilai a', jika a = 0 */
+/* 'Nilai a negatif , nilai a', jika a <0 */
+public class If3 {
+/**
+* @param args
+*/
+public static void main(String[] args) {
+// TODO Auto-generated method stub
+/* Kamus */
+int a;
+Scanner masukan=new Scanner(System.in);
+/* Program */
+System.out.print ("Contoh IF tiga kasus \n");
+System.out.print ("Ketikkan suatu nilai integer :");
+a=masukan.nextInt();
+if (a > 0){
+System.out.println ("Nilai a positif "+ a);
+}else if (a == 0){
+System.out.println ("Nilai Nol "+ a);
+}else /* a > 0 */ {
+System.out.println ("Nilai a negatif "+ a);
+}
+}
+}
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+
+/*NIM           : 13020200123
+ *NAMA          : NURAZISAH AHMAD
+ *HARI/TANGGAL  : Selasa/22-Maret-2022
+ */
+
+/* Eksrpesi kondisional dengan boolean */
+public class KasusBoolean {
+/**
+* @param args
+*/
+public static void main(String[] args) {
+// TODO Auto-generated method stub
+/* Kamus */
+boolean bool;
+/* Algoritma */
+bool= true;
+if(bool) {
+System.out.print("true\n");
+} else
+System.out.print("false\n");
+if(!bool) {
+System.out.print("salah\n");
+} else
+System.out.print("benar\n");
+}
+}
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+
+/*NIM           : 13020200123
+ *NAMA          : NURAZISAH AHMAD
+ *HARI/TANGGAL  : Selasa/22-Maret-2022
+ */
+import java.util.Scanner;
+public class KasusSwitch {
+/**
+* @param args
+*/
+public static void main(String[] args) {
+// TODO Auto-generated method stub
+/* Kamus */
+char cc;
+Scanner masukan=new Scanner(System.in);
+/* Program */
+System.out.print ("Ketikkan sebuah huruf, akhiri dengan RETURN \n");
+cc=masukan.next().charAt(0);
+switch (cc) {
+case 'a' ->  { System.out.print (" Yang anda ketik adalah a\n"); }
+case 'u' ->  { System.out.print (" Yang anda ketik adalah u\n"); }
+case 'e' ->  { System.out.print (" Yang anda ketik adalah e\n"); }
+case 'i' ->  { System.out.print (" Yang anda ketik adalah i\n"); }
+case 'o' ->  { System.out.print (" Yang anda ketik adalah \n"); }
+default -> System.out.print (" Yang anda ketik adalah huruf mati\n");
+}
+}
+}
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+
+/*NIM           : 13020200123
+ *NAMA          : NURAZISAH AHMAD
+ *HARI/TANGGAL  : Selasa/22-Maret-2022
+ */
+import java.util.Scanner;
+/* Membaca jari-jari, menghitung luas lingkaran */
+/* latihan pemakaian konstanta */
+public class Konstant {
+/**
+* @param args
+*/
+public static void main(String[] args) {
+// TODO Auto-generated method stub
+/* Kamus */
+final float PHI = 3.1415f;
+float r;
+Scanner masukan=new Scanner(System.in);
+/* program */ /* baca data */
+System.out.print ("Jari-jari lingkaran =");
+r = masukan.nextFloat();
+/* Hitung dan tulis hasil */
+System.out.print ("Luas lingkaran = "+ (PHI * r * r)+"\n");
+System.out.print ("Akhir program \n");
+}
+}
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+
+/*NIM           : 13020200123
+ *NAMA          : NURAZISAH AHMAD
+ *HARI/TANGGAL  : Selasa/22-Maret-2022
+ */
+import java.util.Scanner;
+/* Maksimum dua bilangan yang dibaca */
+public class Max2 {
+/**
+* @param args
+*/
+public static void main(String[] args) {
+// TODO Auto-generated method stub
+/* Kamus */
+int a, b;
+Scanner masukan=new Scanner(System.in);
+/* Program */
+System.out.print ("Maksimum dua bilangan : \n");
+System.out.print ("Ketikkan dua bilangan, pisahkan dg RETURN :\n");
+a=masukan.nextInt();
+b=masukan.nextInt();
+System.out.println ("Ke dua bilangan : a = "+ a+" b = "+b);
+if (a >= b){
+System.out.println ("Nilai a yang maksimum "+ a);
+}else /* a > b */{
+System.out.println ("Nilai b yang maksimum: "+ b);
+}
+}
+}
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+
+/*NIM           : 13020200123
+ *NAMA          : NURAZISAH AHMAD
+ *HARI/TANGGAL  : Selasa/22-Maret-2022
+ */
+
+import java.util.Scanner;
+/* Baca N, Print 1 s/d N dengan FOR */
+public class PriFor {
+/**
+* @param args
+*/
+@SuppressWarnings("empty-statement")
+public static void main(String[] args) {
+// TODO Auto-generated method stub
+/* Kamus */
+int i,N;
+Scanner masukan = new Scanner(System.in);
+/* Program */
+/* program */
+System.out.print ("Baca N, print 1 s/d N ");
+System.out.print ("N = ");
+N = masukan.nextInt();
+for (i = 1; i <= N; i++){
+System.out.println (i); };
+System.out.println ("Akhir program \n");
+}
+}
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+
+/*NIM           : 13020200123
+ *NAMA          : NURAZISAH AHMAD
+ *HARI/TANGGAL  : Selasa/22-Maret-2022
+ */
+
+import java.util.Scanner;
+/* Baca N, */
+/* Print i = 1 s/d N dengan ITERATE */
+public class PrintIterasi {
+/**
+* @param args
+*/
+public static void main(String[] args) {
+// TODO Auto-generated method stub
+/* Kamus : */
+int N;
+int i;
+Scanner masukan=new Scanner(System.in);
+/* Program */
+System.out.print ("Nilai N >0 = "); /* Inisialisasi*/
+N = masukan.nextInt();
+i = 1; /* First Elmt */
+System.out.print ("Print i dengan ITERATE : \n");
+for (;;){
+System.out.println(i); /* Proses */
+if (i == N)
+/* Kondisi Berhenti */ break;
+else {
+i++; /* Next Elmt */
+}
+} /* (i == N) */
+}
+}
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+
+/*NIM           : 13020200123
+ *NAMA          : NURAZISAH AHMAD
+ *HARI/TANGGAL  : Selasa/22-Maret-2022
+ */
+
+import java.util.Scanner;
+public class PrintRepeat {
+    /**
+    * @param args
+    */
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        /* Kamus : */
+        int N;
+        int i;
+        Scanner masukan=new Scanner(System.in);
+        /* Program */
+        
+        System.out.print ("Nilai N >0 = ");
+        /* Inisialisasi */
+        N = masukan.nextInt();
+        
+        i = 1;
+        /* First Elmt */
+        System.out.print ("Print i dengan REPEAT: \n");
+        do{
+        System.out.print (i+"\n"); /* Proses */
+        i++; /* Next Elmt */
+        }
+        while (i <= N); /* Kondisi pengulangan */
+    }
+}
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+
+/*NIM           : 13020200123
+ *NAMA          : NURAZISAH AHMAD
+ *HARI/TANGGAL  : Selasa/22-Maret-2022
+ */
+
+import java.util.Scanner;
+/* Baca N, Print i = 1 s/d N dengan WHILE */
+public class PrintWhile {
+/**
+* @param args
+*/
+@SuppressWarnings("empty-statement")
+public static void main(String[] args) {
+// TODO Auto-generated method stub
+/* Kamus : */
+int N;
+int i;
+Scanner masukan=new Scanner(System.in);
+/* Program */
+System.out.print ("Nilai N >0 = "); 
+/* Inisialisasi */
+N = masukan.nextInt();
+i = 1; 
+/* First Elmt */
+System.out.print ("Print i dengan WHILE: \n");
+while (i <= N) /* Kondisi pengulangan */
+{ System.out.println (i); /* Proses */
+i++; /* Next Elmt */
+};
+/* (i > N) */
+}
+}
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+
+/*NIM           : 13020200123
+ *NAMA          : NURAZISAH AHMAD
+ *HARI/TANGGAL  : Selasa/22-Maret-2022
+ */
+
+import java.util.Scanner;
+/* Baca N, */
+/* Print i = 1 s/d N dengan while (ringkas) */
+public class PrintWhile1 {
+/**
+* @param args
+*/
+public static void main(String[] args) {
+// TODO Auto-generated method stub
+/* Kamus : */
+int N;
+int i = 1;
+Scanner masukan=new Scanner(System.in);
+/* Program */
+System.out.print ("Nilai N >0 = ");
+N = masukan.nextInt();
+System.out.print ("Print i dengan WHILE (ringkas): \n");
+while (i <= N){
+System.out.println (i++);
+} /* (i > N)*/
+}
+}
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+
+/*NIM           : 13020200123
+ *NAMA          : NURAZISAH AHMAD
+ *HARI/TANGGAL  : Selasa/22-Maret-2022
+ */
+import java.util.Scanner;
+/* contoh baca nilai x, */
+/* Jumlahkan nilai yang dibaca dengan ITERATE */
+public class PrintXinterasi {
+/**
+* @param args
+*/
+public static void main(String[] args) {
+// TODO Auto-generated method stub
+/* Kamus : */
+int Sum=0;
+int x;
+Scanner masukan=new Scanner(System.in);
+/* Program */
+System.out.print ("Masukkan nilai x (int), akhiri dg 999: ");
+x = masukan.nextInt(); /* First Elmt */
+if (x == 999){
+    System.out.print ("Kasus kosong \n");
+    }
+else
+{ 
+/* MInimal ada satu data yang dijumlahkan*/
+    
+    Sum = x; /* Inisialisasi; invariant !! */
+    for (;;){
+    System.out.print ("Masukkan nilai x (int),akhiri dg 999 : ");
+    x = masukan.nextInt(); /* Next Elmt */
+        if(x==999)
+        break;
+    else{
+    Sum = Sum + x; 
+    /* Proses */
+    }   
+    }
+    }
+    System.out.println("Hasil penjumlahan = "+ Sum);
+    /* Terminasi */
+}
+}
